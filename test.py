@@ -87,26 +87,26 @@ class CapstoneTestCase(unittest.TestCase):
 # patch with no authorization
 
     def test_patch_classesF(self):
-        res = self.client().patch('/Classes/6', json=self.editcals)
+        res = self.client().patch('/Classes/1', json=self.editcals)
         data = json.loads(res.data)
         self.assertEqual(res.status_code, 401)
 # patch with authorization
 
     def test_patch_classesS(self):
-        res = self.client().patch('/Classes/6', headers=self.token,
+        res = self.client().patch('/Classes/1', headers=self.token,
                                   json=self.editcals)
         data = json.loads(res.data)
         self.assertEqual(res.status_code, 200)
 # delete with  no authorization
 
     def test_delete_classesF(self):
-        res = self.client().delete('/Classes/27', json=self.editcals)
+        res = self.client().delete('/Classes/1', json=self.editcals)
         data = json.loads(res.data)
         self.assertEqual(res.status_code, 401)
 # delete with  authorization
 
     def test_delete_classesS(self):
-        res = self.client().delete('/Classes/28', headers=self.token,
+        res = self.client().delete('/Classes/1', headers=self.token,
                                    json=self.editcals)
         data = json.loads(res.data)
         self.assertEqual(res.status_code, 200)

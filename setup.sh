@@ -1,3 +1,5 @@
-AUTH0_DOMAIN = 'capstoner.us.auth0.com'
-ALGORITHMS = ['RS256']
-API_AUDIENCE = 'onclasses'
+set AUTH0_DOMAIN = "capstoner.us.auth0.com"
+set ALGORITHMS = "RS256"
+set API_AUDIENCE = "onclasses"
+set DATABASE_URL="postgres://ydrgytuyqqvuwg:13879929f11102923316e54c73e7280ba1f3d49654caf285522424407e78dccb@ec2-54-157-88-70.compute-1.amazonaws.com:5432/d5rc405rjc907p"
+set EXCITED="true"
