@@ -1,0 +1,1107 @@
+{
+	"info": {
+		"_postman_id": "5c624ac5-605b-4c42-93f7-0da121230f1c",
+		"name": "Capstone-Project",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "public",
+			"item": [
+				{
+					"name": "https://capstone-project-fsrb.herokuapp.com/Courses",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "60e5baeb-9dea-4205-8a50-fb316781b997",
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"pm.test(\"value contains Courses array\", function () {\r",
+									"    var jsonData = pm.response.json();\r",
+									"    pm.expect(jsonData.Courses).to.be.an('array')\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"name\":\"Java\",\"description\":\"Learn java in 4 weeks from A to Z\",\"duration\":\"4 weeks\"}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://capstone-project-fsrb.herokuapp.com/Courses",
+							"protocol": "https",
+							"host": [
+								"capstone-project-fsrb",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"Courses"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "https://capstone-project-fsrb.herokuapp.com/Courses",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "4758f207-3bd5-477e-9ea8-0ef4ecfe5e09",
+								"exec": [
+									"pm.test(\"Status code is 401\", function () {\r",
+									"    pm.response.to.have.status(401);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"name\":\"PHP\",\"description\":\"Learn PHP in 5 weeks from A to Z\",\"duration\":\"5 weeks\"}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://capstone-project-fsrb.herokuapp.com/Courses",
+							"protocol": "https",
+							"host": [
+								"capstone-project-fsrb",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"Courses"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "https://capstone-project-fsrb.herokuapp.com/Teachers",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "b776117f-34ed-4370-82de-526a4063e8a1",
+								"exec": [
+									"pm.test(\"Status code is 401\", function () {\r",
+									"    pm.response.to.have.status(401);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"name\":\"Ali\",\"email\":\"Ali124@hotmail.con\",\"phone\":\"54645646\",\"profile\":\"programer and maybe devloper\"}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://capstone-project-fsrb.herokuapp.com/Teachers",
+							"protocol": "https",
+							"host": [
+								"capstone-project-fsrb",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"Teachers"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "https://capstone-project-fsrb.herokuapp.com/Teachers",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "e3123ae7-ce67-43e3-8656-35e252f8fc12",
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"pm.test(\"value contains teachers array\", function () {\r",
+									"    var jsonData = pm.response.json();\r",
+									"    pm.expect(jsonData.teachers).to.be.an('array')\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://capstone-project-fsrb.herokuapp.com/Teachers",
+							"protocol": "https",
+							"host": [
+								"capstone-project-fsrb",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"Teachers"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "https://capstone-project-fsrb.herokuapp.com/Classes",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "86919645-3b10-4f01-986a-c2af2528cde5",
+								"exec": [
+									"pm.test(\"Status code is 401\", function () {\r",
+									"    pm.response.to.have.status(401);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"name\":\"anything in 5 weeks\",\"start_time\":\"10-10-2020 12:34:23\",\"teacher_id\":\"2\",\"course_id\":\"2\"}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://capstone-project-fsrb.herokuapp.com/Classes",
+							"protocol": "https",
+							"host": [
+								"capstone-project-fsrb",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"Classes"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "https://capstone-project-fsrb.herokuapp.com/Classes",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "87d26b02-c726-41ba-ac47-b03b276b506d",
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"pm.test(\"value contains Classes array\", function () {\r",
+									"    var jsonData = pm.response.json();\r",
+									"    pm.expect(jsonData.Classes).to.be.an('array')\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://capstone-project-fsrb.herokuapp.com/Classes",
+							"protocol": "https",
+							"host": [
+								"capstone-project-fsrb",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"Classes"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "https://capstone-project-fsrb.herokuapp.com/Classes/1",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "3bc6621c-2cb0-4548-b6c1-d6fa57b6330b",
+								"exec": [
+									"pm.test(\"Status code is 401\", function () {\r",
+									"    pm.response.to.have.status(401);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"name\":\"test\",\"start_time\":\"8-8-2020 12:34:23\",\"course_id\":\"2\"}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://capstone-project-fsrb.herokuapp.com/Classes/1",
+							"protocol": "https",
+							"host": [
+								"capstone-project-fsrb",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"Classes",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "https://capstone-project-fsrb.herokuapp.com/Classes/1",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "cf575a56-fd7f-4489-9e16-1408cd89d29c",
+								"exec": [
+									"pm.test(\"Status code is 401\", function () {\r",
+									"    pm.response.to.have.status(401);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "https://capstone-project-fsrb.herokuapp.com/Classes/1",
+							"protocol": "https",
+							"host": [
+								"capstone-project-fsrb",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"Classes",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"description": "public requests that do not require authentication",
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Administrator",
+			"item": [
+				{
+					"name": "https://capstone-project-fsrb.herokuapp.com/Courses",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "60e5baeb-9dea-4205-8a50-fb316781b997",
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"pm.test(\"value contains Courses array\", function () {\r",
+									"    var jsonData = pm.response.json();\r",
+									"    pm.expect(jsonData.Courses).to.be.an('array')\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"name\":\"Java\",\"description\":\"Learn java in 4 weeks from A to Z\",\"duration\":\"4 weeks\"}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://capstone-project-fsrb.herokuapp.com/Courses",
+							"protocol": "https",
+							"host": [
+								"capstone-project-fsrb",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"Courses"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "https://capstone-project-fsrb.herokuapp.com/Teachers",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "e3123ae7-ce67-43e3-8656-35e252f8fc12",
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"pm.test(\"value contains teachers array\", function () {\r",
+									"    var jsonData = pm.response.json();\r",
+									"    pm.expect(jsonData.teachers).to.be.an('array')\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://capstone-project-fsrb.herokuapp.com/Teachers",
+							"protocol": "https",
+							"host": [
+								"capstone-project-fsrb",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"Teachers"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "https://capstone-project-fsrb.herokuapp.com/Classes",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "87d26b02-c726-41ba-ac47-b03b276b506d",
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"pm.test(\"value contains Classes array\", function () {\r",
+									"    var jsonData = pm.response.json();\r",
+									"    pm.expect(jsonData.Classes).to.be.an('array')\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://capstone-project-fsrb.herokuapp.com/Classes",
+							"protocol": "https",
+							"host": [
+								"capstone-project-fsrb",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"Classes"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "https://capstone-project-fsrb.herokuapp.com/Courses",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "4758f207-3bd5-477e-9ea8-0ef4ecfe5e09",
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"name\":\"PHP\",\"description\":\"Learn PHP in 5 weeks from A to Z\",\"duration\":\"5 weeks\"}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://capstone-project-fsrb.herokuapp.com/Courses",
+							"protocol": "https",
+							"host": [
+								"capstone-project-fsrb",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"Courses"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "https://capstone-project-fsrb.herokuapp.com/Teachers",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "b776117f-34ed-4370-82de-526a4063e8a1",
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"name\":\"Ali\",\"email\":\"Ali124@hotmail.con\",\"phone\":\"54645646\",\"profile\":\"programer and maybe devloper\"}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://capstone-project-fsrb.herokuapp.com/Teachers",
+							"protocol": "https",
+							"host": [
+								"capstone-project-fsrb",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"Teachers"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "https://capstone-project-fsrb.herokuapp.com/Classes",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "86919645-3b10-4f01-986a-c2af2528cde5",
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"name\":\"anything in 5 weeks\",\"start_time\":\"10-10-2020 12:34:23\",\"teacher_id\":\"2\",\"course_id\":\"2\"}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://capstone-project-fsrb.herokuapp.com/Classes",
+							"protocol": "https",
+							"host": [
+								"capstone-project-fsrb",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"Classes"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "https://capstone-project-fsrb.herokuapp.com/Classes/1",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "3bc6621c-2cb0-4548-b6c1-d6fa57b6330b",
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"name\":\"test\",\"start_time\":\"8-8-2020 12:34:23\",\"course_id\":\"1\"}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://capstone-project-fsrb.herokuapp.com/Classes/1",
+							"protocol": "https",
+							"host": [
+								"capstone-project-fsrb",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"Classes",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "https://capstone-project-fsrb.herokuapp.com/Classes/1",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "cf575a56-fd7f-4489-9e16-1408cd89d29c",
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "https://capstone-project-fsrb.herokuapp.com/Classes/1",
+							"protocol": "https",
+							"host": [
+								"capstone-project-fsrb",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"Classes",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"description": "the person who has full access to all the functions ",
+			"auth": {
+				"type": "bearer",
+				"bearer": [
+					{
+						"key": "token",
+						"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6ImVkZTV2ek9tbnlEUGFxSUtHbGVvMyJ9.eyJpc3MiOiJodHRwczovL2NhcHN0b25lci51cy5hdXRoMC5jb20vIiwic3ViIjoiYXV0aDB8NWY4MDdmMjNhOWZhMDMwMDc1YTVmNTM4IiwiYXVkIjoib25jbGFzc2VzIiwiaWF0IjoxNjAzMTM4NjA0LCJleHAiOjE2MDMxNDU4MDQsImF6cCI6ImdyRHJLNnlOUTNxM1NYOW9nV3IwU2llQzNScDF6c2N5Iiwic2NvcGUiOiIiLCJwZXJtaXNzaW9ucyI6WyJkZWxldGU6Y2xhc3NlcyIsInBhdGNoOmNsYXNzZXMiLCJwb3N0OmNsYXNzZXMiLCJwb3N0OmNvdXJzZXMiLCJwb3N0OnRlYWNoZXJzIl19.hIsDMExeGRiZFWA2DcYShx2lfKdM1Cu0c1ACCmNNVeo58S8DFFHtB5toYCWyS_dUAdI0PMDXgSPKfAFR-oKwB2o-rB1w0ixVg1SM5IaTzy5x8JF051Zyc-DrWjgDEK08fkzTuzRW0e-miMjiRfhbNIlcE69t2-KG-kkReeLO58rBQiJHdWJcIRutD14rt0T0y4RGqu1rElg9VemTIn28up02c7x8foFXVIiTS4kuztd1tk9cPLzcPo99AZTYvXoh8jM1nriN7ScOT5alvDQX9mvxqxoez_eZ2UheVcwNxpn_9oINYjh2XAhKQ8PDIu_84gRGAy22gjXTtdV0ZNFk6A",
+						"type": "string"
+					}
+				]
+			},
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "39cd66a6-4587-4264-bbca-ee69bf8c8fe2",
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"id": "1c1264d5-bd83-4e16-ae96-fd8f19676381",
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "assistant_administrator",
+			"item": [
+				{
+					"name": "https://capstone-project-fsrb.herokuapp.com/Courses",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "60e5baeb-9dea-4205-8a50-fb316781b997",
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"pm.test(\"value contains Courses array\", function () {\r",
+									"    var jsonData = pm.response.json();\r",
+									"    pm.expect(jsonData.Courses).to.be.an('array')\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"name\":\"Java\",\"description\":\"Learn java in 4 weeks from A to Z\",\"duration\":\"4 weeks\"}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://capstone-project-fsrb.herokuapp.com/Courses",
+							"protocol": "https",
+							"host": [
+								"capstone-project-fsrb",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"Courses"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "https://capstone-project-fsrb.herokuapp.com/Teachers",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "e3123ae7-ce67-43e3-8656-35e252f8fc12",
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"pm.test(\"value contains teachers array\", function () {\r",
+									"    var jsonData = pm.response.json();\r",
+									"    pm.expect(jsonData.teachers).to.be.an('array')\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://capstone-project-fsrb.herokuapp.com/Teachers",
+							"protocol": "https",
+							"host": [
+								"capstone-project-fsrb",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"Teachers"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "https://capstone-project-fsrb.herokuapp.com/Classes",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "87d26b02-c726-41ba-ac47-b03b276b506d",
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"pm.test(\"value contains Classes array\", function () {\r",
+									"    var jsonData = pm.response.json();\r",
+									"    pm.expect(jsonData.Classes).to.be.an('array')\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://capstone-project-fsrb.herokuapp.com/Classes",
+							"protocol": "https",
+							"host": [
+								"capstone-project-fsrb",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"Classes"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "https://capstone-project-fsrb.herokuapp.com/Courses",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "4758f207-3bd5-477e-9ea8-0ef4ecfe5e09",
+								"exec": [
+									"pm.test(\"Status code is 401\", function () {\r",
+									"    pm.response.to.have.status(401);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"name\":\"PHP\",\"description\":\"Learn PHP in 5 weeks from A to Z\",\"duration\":\"5 weeks\"}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://capstone-project-fsrb.herokuapp.com/Courses",
+							"protocol": "https",
+							"host": [
+								"capstone-project-fsrb",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"Courses"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "https://capstone-project-fsrb.herokuapp.com/Teachers",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "b776117f-34ed-4370-82de-526a4063e8a1",
+								"exec": [
+									"pm.test(\"Status code is 401\", function () {\r",
+									"    pm.response.to.have.status(401);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"name\":\"Ali\",\"email\":\"Ali124@hotmail.con\",\"phone\":\"54645646\",\"profile\":\"programer and maybe devloper\"}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://capstone-project-fsrb.herokuapp.com/Teachers",
+							"protocol": "https",
+							"host": [
+								"capstone-project-fsrb",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"Teachers"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "https://capstone-project-fsrb.herokuapp.com/Classes",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "86919645-3b10-4f01-986a-c2af2528cde5",
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"name\":\"anything in 5 weeks\",\"start_time\":\"10-10-2020 12:34:23\",\"teacher_id\":\"2\",\"course_id\":\"2\"}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://capstone-project-fsrb.herokuapp.com/Classes",
+							"protocol": "https",
+							"host": [
+								"capstone-project-fsrb",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"Classes"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "https://capstone-project-fsrb.herokuapp.com/Classes/1",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "3bc6621c-2cb0-4548-b6c1-d6fa57b6330b",
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"name\":\"test\",\"start_time\":\"8-8-2020 12:34:23\",\"course_id\":\"2\"}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://capstone-project-fsrb.herokuapp.com/Classes/1",
+							"protocol": "https",
+							"host": [
+								"capstone-project-fsrb",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"Classes",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "https://capstone-project-fsrb.herokuapp.com/Classes/1",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "cf575a56-fd7f-4489-9e16-1408cd89d29c",
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "https://capstone-project-fsrb.herokuapp.com/Classes/1",
+							"protocol": "https",
+							"host": [
+								"capstone-project-fsrb",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"Classes",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"description": "the person who has limited access to the app functions",
+			"auth": {
+				"type": "bearer",
+				"bearer": [
+					{
+						"key": "token",
+						"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6ImVkZTV2ek9tbnlEUGFxSUtHbGVvMyJ9.eyJpc3MiOiJodHRwczovL2NhcHN0b25lci51cy5hdXRoMC5jb20vIiwic3ViIjoiYXV0aDB8NWY4MDhiZGExOTk0Y2YwMDc1ZGU3MjNjIiwiYXVkIjoib25jbGFzc2VzIiwiaWF0IjoxNjAzMTQzNDI5LCJleHAiOjE2MDMxNTA2MjksImF6cCI6ImdyRHJLNnlOUTNxM1NYOW9nV3IwU2llQzNScDF6c2N5Iiwic2NvcGUiOiIiLCJwZXJtaXNzaW9ucyI6WyJkZWxldGU6Y2xhc3NlcyIsInBhdGNoOmNsYXNzZXMiLCJwb3N0OmNsYXNzZXMiXX0.Amp8MiCtlf4vcFq2fUY-PKwrOpr9NpwJ2bImg_EpPJmhzOixhlfj2kWNitAHuZ8vfoZfe5rn-ZfJjHRshAgo6b4ksXYYNT2FU8vC0LBNiJkZiCyx41JzBtH4r3KJrgXMM3i_CgLFkmGoQLvCbvEZfrlX7mvfX6mEYPVRrfsy_DqN0viJcjFnTSq64cUMIhwjS7Edy356ZLCJ6leLBu3yG9Ne6qmcU1aDq3aEPCnP8Fn-J15s3wWPjGpMaY5Jme7x7TgsGBBTUosd5CpRgaAVn-EG1UyGWbO90JA5gCKxdMo_RwKI79NSKQJ2jDgDQTbTmsg8KXiTNBFy948gNzyKSg",
+						"type": "string"
+					}
+				]
+			},
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "73beae3c-9b00-4451-b5f8-24ebc578f1d1",
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"id": "c93db2d6-8087-49e8-8b73-49c34484c83d",
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			],
+			"protocolProfileBehavior": {}
+		}
+	],
+	"protocolProfileBehavior": {}
+}
