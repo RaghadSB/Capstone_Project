@@ -28,7 +28,7 @@ class CapstoneTestCase(unittest.TestCase):
                          "start_time": "8-8-2020 12:34:23",
                          "course_id": "2"}
         self.token = {"Content-Type": "application/json",
-                      "Authorization": "Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6ImVkZTV2ek9tbnlEUGFxSUtHbGVvMyJ9.eyJpc3MiOiJodHRwczovL2NhcHN0b25lci51cy5hdXRoMC5jb20vIiwic3ViIjoiYXV0aDB8NWY4MDdmMjNhOWZhMDMwMDc1YTVmNTM4IiwiYXVkIjoib25jbGFzc2VzIiwiaWF0IjoxNjAzMDU3NjEwLCJleHAiOjE2MDMwNjQ4MTAsImF6cCI6ImdyRHJLNnlOUTNxM1NYOW9nV3IwU2llQzNScDF6c2N5Iiwic2NvcGUiOiIiLCJwZXJtaXNzaW9ucyI6WyJkZWxldGU6Y2xhc3NlcyIsInBhdGNoOmNsYXNzZXMiLCJwb3N0OmNsYXNzZXMiLCJwb3N0OmNvdXJzZXMiLCJwb3N0OnRlYWNoZXJzIl19.Fp9eHWsgp_s89MJdQqFYGbM4u_ARnVZtJ517TX_sITI4L-RDOz8JsZOYUEMmHPR9tCIQr_HRM3Qcd-hoi-RzwWeF2Jfgr5b-cRQGDEgIOCnP5WBgKbbyNAsjBoCUGZ9vzs0Yv_XJHBCH20_MQ64KVJydaAJQ5NpxNrEQN0rj-Jgt93WwgbUrKB_-mUx__iOu-5xnDVOLwP5E6GMUgOYeux_B07Do2frxPDVPrNOchNesmrNkOpUosIJ_tJs0-l7mPcrsDLdu2BdPPNCbVhJ4pOsUjBnGiXzOvvLfm1K4SGMNXUfI4ubb9D8z6e4ryrTkv2xPN2DYFMvSUInIbIY7FA"}
+                      "Authorization": "Bearer "}
 
         with self.app.app_context():
             self.db = SQLAlchemy()

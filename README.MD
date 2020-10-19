@@ -3,13 +3,26 @@
 This application is a simple simulation of online courses where you can create a class that is made of teacher and course, this application will allow you to create a course and add an instructor, after that you can create a class by selecting one of the courses and instructor for this course.
 this is a simple application made only for learning purposes to demonstrate my understanding of the FSND course.
 
+## Test Live Aaplication
+- this application is hosted in [https://capstone-project-fsrb.herokuapp.com], if you click this link you will see 404 that's because this application has no home page you can test GET endpoints where you can list all the tables data as a public user, you can list three tables using these endpoints
+[https://capstone-project-fsrb.herokuapp.com/Classes]
+[https://capstone-project-fsrb.herokuapp.com/Teachers]
+[https://capstone-project-fsrb.herokuapp.com/Courses]
+
+- for other endpoints where you can add data and delete or edit data, you need to log in as either administrator or administer-assistant and to log in, you can go to [https://capstoner.us.auth0.com/authorize?audience=onclasses&response_type=token&client_id=grDrK6yNQ3q3SX9ogWr0SieC3Rp1zscy&redirect_uri=https://capstone-project-fsrb.herokuapp.com]
+
+ **the tokens for each user will be provided when submitting the project, and you can test it using postman collection to test other endpoints**
+
+- to logou from the application go to this link [https://capstoner.us.auth0.com/v2/logout?client_id=grDrK6yNQ3q3SX9ogWr0SieC3Rp1zscy&returnTo=https://capstone-project-fsrb.herokuapp.com/logout]
+
+
 ## Getting Started
-this application is python base with the use of Flask platform, follow the instructions to run the application.
+this application is python base with the use of Flask platform, follow the instructions to run the application in **local environment**.
 
 #### Python 3.7
  install the latest version of python.
 
- ### Installing Dependencies
+#### Installing Dependencies
  you can install all the required packages using the requirements text file, once you create your virtual environment for this project you can add this command using bash to install dependencies to your virtual environment.
 
  ```bash
@@ -25,10 +38,9 @@ within your created virtual environment in the project directory and after insta
 
 ```bash
 export FLASK_APP=app.py
-export FLASK_ENV=development
-flask run
+flask run --reload
 ```
-### application compnent
+### application components
 There are 8 endpoints for this application each of serving a function and for specific users.
 **Users**
 - administrator: can perform all task and have access to all endpoints, which are
@@ -124,8 +136,8 @@ _course-id_
  -400 Bad Request
  -500 Internal Server Error
 
-## Testing
-To run the tests,run
+### Testing
+To run the tests ,run
 ```
 dropdb capstoneDB_test
 createdb capstoneDB_test

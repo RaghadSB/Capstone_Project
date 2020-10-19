@@ -4,15 +4,9 @@ import json
 import os
 
 
-
 database_path = os.getenv("DATABASE_URL")
 
 db = SQLAlchemy()
-
-'''
-setup_db(app)
-    binds a flask application and a SQLAlchemy service
-'''
 
 
 def setup_db(app, database_path=database_path):
@@ -21,12 +15,6 @@ def setup_db(app, database_path=database_path):
     db.app = app
     db.init_app(app)
     db.create_all()
-
-
-'''
-Person
-Have title and release year
-'''
 
 
 class Courses(db.Model):
