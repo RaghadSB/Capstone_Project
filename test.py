@@ -40,46 +40,46 @@ class CapstoneTestCase(unittest.TestCase):
 # get endpoints
 
     def test_get_Teachers(self):
-        res = self.client().get('/Teachers')
+        res = self.client().get('/teachers')
         data = json.loads(res.data)
         self.assertEqual(res.status_code, 200)
         self.assertEqual(data['success'], True)
 
     def test_get_Classes(self):
-        res = self.client().get('/Classes')
+        res = self.client().get('/classes')
         data = json.loads(res.data)
         self.assertEqual(res.status_code, 200)
         self.assertEqual(data['success'], True)
 
     def test_get_Courses(self):
-        res = self.client().get('/Courses')
+        res = self.client().get('/courses')
         data = json.loads(res.data)
         self.assertEqual(res.status_code, 200)
         self.assertEqual(data['success'], True)
 # post endpoints with no authorization
 
     def test_post_courseF(self):
-        res = self.client().post('/Courses', json=self.course)
+        res = self.client().post('/courses', json=self.course)
         data = json.loads(res.data)
         self.assertEqual(res.status_code, 401)
 # post endpoints with authorization
 
     def test_post_courseS(self):
-        res = self.client().post('/Courses', headers=self.token,
+        res = self.client().post('/courses', headers=self.token,
                                  json=self.course)
         data = json.loads(res.data)
         self.assertEqual(res.status_code, 200)
         self.assertEqual(data['success'], True)
 
     def test_post_teachersS(self):
-        res = self.client().post('/Teachers', headers=self.token,
+        res = self.client().post('/teachers', headers=self.token,
                                  json=self.teacher)
         data = json.loads(res.data)
         self.assertEqual(res.status_code, 200)
         self.assertEqual(data['success'], True)
 
     def test_post_classesS(self):
-        res = self.client().post('/Classes', headers=self.token,
+        res = self.client().post('/classes', headers=self.token,
                                  json=self.classs)
         data = json.loads(res.data)
         self.assertEqual(res.status_code, 200)
@@ -87,26 +87,26 @@ class CapstoneTestCase(unittest.TestCase):
 # patch with no authorization
 
     def test_patch_classesF(self):
-        res = self.client().patch('/Classes/1', json=self.editcals)
+        res = self.client().patch('/classes/1', json=self.editcals)
         data = json.loads(res.data)
         self.assertEqual(res.status_code, 401)
 # patch with authorization
 
     def test_patch_classesS(self):
-        res = self.client().patch('/Classes/1', headers=self.token,
+        res = self.client().patch('/classes/1', headers=self.token,
                                   json=self.editcals)
         data = json.loads(res.data)
         self.assertEqual(res.status_code, 200)
 # delete with  no authorization
 
     def test_delete_classesF(self):
-        res = self.client().delete('/Classes/1', json=self.editcals)
+        res = self.client().delete('/classes/1', json=self.editcals)
         data = json.loads(res.data)
         self.assertEqual(res.status_code, 401)
 # delete with  authorization
 
     def test_delete_classesS(self):
-        res = self.client().delete('/Classes/1', headers=self.token,
+        res = self.client().delete('/classes/1', headers=self.token,
                                    json=self.editcals)
         data = json.loads(res.data)
         self.assertEqual(res.status_code, 200)

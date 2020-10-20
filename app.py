@@ -31,28 +31,28 @@ def create_app(test_config=None):
             'GET,PATCH,POST,DELETE,OPTIONS')
         return response
 
-    @app.route('/Teachers')
+    @app.route('/teachers')
     def get_teachers():
         data = Teachers.query.all()
         dataforma = [d.format() for d in data]
         return jsonify({"success": True, "teachers": dataforma})
 # ***********************************************************
 
-    @app.route('/Classes')
+    @app.route('/classes')
     def get_Classes():
         data = Classes.query.all()
         dataforma = [d.format() for d in data]
         return jsonify({"success": True, "Classes": dataforma})
 # ***********************************************************
 
-    @app.route('/Courses')
+    @app.route('/courses')
     def get_Courses():
         data = Courses.query.all()
         dataforma = [d.format() for d in data]
         return jsonify({"success": True, "Courses": dataforma})
 # **********************************************************
 
-    @app.route('/Courses', methods=['POST'])
+    @app.route('/courses', methods=['POST'])
     @requires_auth('post:courses')
     def add_Courses(payload):
         name = request.get_json()['name']
@@ -74,7 +74,7 @@ def create_app(test_config=None):
             abort(422)
 # ---------------------------------------------------------
 
-    @app.route('/Teachers', methods=['POST'])
+    @app.route('/teachers', methods=['POST'])
     @requires_auth('post:teachers')
     def add_Teachers(payload):
         name = request.get_json()['name']
@@ -98,7 +98,7 @@ def create_app(test_config=None):
             abort(422)
 # -----------------------------------------------------------
 
-    @app.route('/Classes', methods=['POST'])
+    @app.route('/classes', methods=['POST'])
     @requires_auth('post:classes')
     def create_class(payload):
         name = request.get_json()['name']
@@ -118,7 +118,7 @@ def create_app(test_config=None):
             abort(422)
 # -----------------------------------------------------------
 
-    @app.route('/Classes/<int:class_id>', methods=['PATCH'])
+    @app.route('/classes/<int:class_id>', methods=['PATCH'])
     @requires_auth('patch:classes')
     def edit_class(payload, class_id):
         all_classes = Classes.query.all()
@@ -146,7 +146,7 @@ def create_app(test_config=None):
                 abort(422)
 # -----------------------------------------------------------------
 
-    @app.route('/Classes/<int:class_id>', methods=['DELETE'])
+    @app.route('/classes/<int:class_id>', methods=['DELETE'])
     @requires_auth('delete:classes')
     def delete_class(payload, class_id):
         all_classes = Classes.query.all()

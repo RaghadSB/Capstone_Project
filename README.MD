@@ -5,9 +5,9 @@ this is a simple application made only for learning purposes to demonstrate my u
 
 ## Test Live Aaplication
 - this application is hosted in [https://capstone-project-fsrb.herokuapp.com], if you click this link you will see 404 that's because this application has no home page you can test GET endpoints where you can list all the tables data as a public user, you can list three tables using these endpoints
-[https://capstone-project-fsrb.herokuapp.com/Classes]
-[https://capstone-project-fsrb.herokuapp.com/Teachers]
-[https://capstone-project-fsrb.herokuapp.com/Courses]
+[https://capstone-project-fsrb.herokuapp.com/classes]
+[https://capstone-project-fsrb.herokuapp.com/teachers]
+[https://capstone-project-fsrb.herokuapp.com/courses]
 
 - for other endpoints where you can add data and delete or edit data, you need to log in as either administrator or administer-assistant and to log in, you can go to [https://capstoner.us.auth0.com/authorize?audience=onclasses&response_type=token&client_id=grDrK6yNQ3q3SX9ogWr0SieC3Rp1zscy&redirect_uri=https://capstone-project-fsrb.herokuapp.com]
 
@@ -59,44 +59,44 @@ _add teacher_
 
 **endpoint**
 
-- GET '/Teachers' :
+- GET '/teachers' :
   display all the teachers in the database.
   Request Arguments: None
   Returns: return a JSON object that contains all the teachers and success status indicate the success of the request.
 
-- GET '/Courses' :
+- GET '/courses' :
   display all the courses in the database.
   Request Arguments: None
   Returns: return a JSON object that contains all the courses and success status indicate the success of the request.
 
-- GET '/Classes' :
+- GET '/classes' :
   display all the classes in the database.
   Request Arguments: None
   Returns: return a JSON object that contains all the classes and success status indicate the success of the request.
 
-- POST '/Teachers':
+- POST '/teachers':
  add a new teacher to the database
  Request Arguments: JSON contains the teacher info, name, and email phone and a brief bio with an image of the instructor.
  Returns: a JSON object that returns the new teacher, and status that indicates the success of the post request.
 
 
-- POST '/Courses':
+- POST '/courses':
  add a new course to the database
  Request Arguments: JSON contains the Courses info, name, and brief description with an image of the course.
  Returns: a JSON object that returns the new course, and status that indicates the success of the post request.
 
-- POST '/Classes':
+- POST '/classes':
  add new classes to the database
  Request Arguments: JSON contains the class info, name and start date, and course id, teacher id.
  Returns: a JSON object that returns the new class, and status that indicates the success of the post request.
 
-- DELETE '/Classes/classes_id':
+- DELETE '/classes/classes_id':
  delete a selected class from the database
  Request Arguments: an integer that represents the classes_id.
  Returns: a JSON that returns the id of deleted class, and status that indicates the success of the deletion request.
 
 
-- PATCH '/Classes/classes_id':
+- PATCH '/classes/classes_id':
  edit the selected class from the database
  Request Arguments: an integer that represents the classes_id.
  Returns: JSON that returns the id of the selected class, and status that indicates the success of the patch request.
